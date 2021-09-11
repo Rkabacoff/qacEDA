@@ -35,9 +35,6 @@
 tab <- function(data, x, sort = FALSE, maxcat = NULL, minp = NULL,
                 na.rm = FALSE, total = FALSE, digits = 2,
                 cum = FALSE, plot=FALSE) {
-  if (na.rm) {
-    data = stats::na.omit(data)
-  }
 
   vname <- as.character(substitute(x))
   x = data[vname][[1]]
@@ -51,7 +48,13 @@ tab <- function(data, x, sort = FALSE, maxcat = NULL, minp = NULL,
     x = as.factor(x)
   }
 
-  t = table(x, useNA = "ifany")
+  if (na.rm == TRUE){
+    useNA = "no"
+  } else {
+    useNA = "ifany"
+  }
+
+  t = table(x, useNA = useNA)
   ns <- as.vector(t)
   cats = names(t)
   props = as.vector(t / sum(t))
