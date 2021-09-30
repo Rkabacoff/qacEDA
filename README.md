@@ -25,4 +25,4 @@ remotes::install_github("rkabacoff/qacEDA")
 The easiest way to get started is, appropriately enough, by reading the [**Getting Started**](https://rkabacoff.github.io/qacEDA/articles/qacEDA.html) guide. Next, take a look at the
 [Documentation](https://rkabacoff.github.io/qacEDA/reference/index.html). There are also *vignettes* on specific topics.
 
-**Suggestions are always welcome!**
+*Suggestions are always welcome!*
